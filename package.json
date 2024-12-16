@@ -1,0 +1,20 @@
+{
+  "name": "cpu",
+  "version": "0.0.1-rc.1",
+  "author": "roman@nero-networks.de",
+  "license": "MIT",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "prestart": "npm run build",
+    "start": "node dist",
+    "build": "tsc",
+    "clean": "rm -rf dist node_modules package-lock.json",
+    "clean-build": "npm run clean; npm i && npm audit fix && npm run build",
+    "asm": "tsc; node dist/asm.js"
+  },
+  "devDependencies": {
+    "@types/node": "",
+    "typescript": ""
+  }
+}
